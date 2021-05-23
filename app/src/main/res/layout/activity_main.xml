@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+  xmlns:app="http://schemas.android.com/apk/res-auto"
+  xmlns:tools="http://schemas.android.com/tools"
+  android:layout_width="match_parent"
+  android:layout_height="match_parent"
+  tools:context=".MainActivity"
+  android:padding="20dp">
+
+
+  <ImageView
+    android:id="@+id/image1"
+    android:layout_width="0dp"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="60dp"
+    android:src="@drawable/gorjeta"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintTop_toTopOf="parent" />
+
+  <TextView
+    android:id="@+id/textview1"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="20dp"
+    android:text="Digite um valor EX: 45.00"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintTop_toBottomOf="@+id/image1" />
+
+
+  <com.google.android.material.textfield.TextInputLayout
+    android:id="@+id/textInputValor"
+    android:layout_width="0dp"
+    android:layout_height="wrap_content"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintTop_toBottomOf="@+id/textview1">
+
+    <com.google.android.material.textfield.TextInputEditText
+      android:id="@+id/valorConta"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:background="@color/white"
+      android:inputType="numberDecimal">
+
+    </com.google.android.material.textfield.TextInputEditText>
+
+
+  </com.google.android.material.textfield.TextInputLayout>
+
+  <TextView
+    android:id="@+id/textResultadoSeekBar"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="20dp"
+    android:layout_marginEnd="16dp"
+    app:layout_constraintEnd_toStartOf="@+id/seekBarGorjeta"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintTop_toBottomOf="@+id/textInputValor"
+    tools:text="20%" />
+
+  <SeekBar
+    android:id="@+id/seekBarGorjeta"
+    android:layout_width="0dp"
+    android:layout_height="wrap_content"
+    android:layout_marginStart="24dp"
+    android:max="100"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintStart_toEndOf="@id/textResultadoSeekBar"
+    app:layout_constraintTop_toTopOf="@+id/textResultadoSeekBar" />
+
+
+  <TextView
+    android:id="@+id/textGorjeta"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="20dp"
+    android:layout_marginEnd="8dp"
+    android:text="Gorjeta"
+    app:layout_constraintEnd_toStartOf="@+id/valorGorjeta"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintTop_toBottomOf="@+id/seekBarGorjeta"
+    tools:text="Gorjeta" />
+
+  <TextView
+    android:id="@+id/valorGorjeta"
+    android:layout_width="0dp"
+    android:layout_height="wrap_content"
+    android:layout_marginStart="8dp"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintStart_toEndOf="@id/textGorjeta"
+    app:layout_constraintTop_toTopOf="@+id/textGorjeta"
+    android:text="R$ 0.00"/>
+
+  <TextView
+    android:id="@+id/textTotal"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="20dp"
+    android:layout_marginEnd="8dp"
+    android:text="Total"
+    app:layout_constraintEnd_toStartOf="@+id/valorTotal"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintTop_toBottomOf="@+id/textGorjeta"
+    tools:text="Total" />
+
+  <TextView
+    android:id="@+id/valorTotal"
+    android:layout_width="0dp"
+    android:layout_height="wrap_content"
+    android:layout_marginStart="8dp"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintStart_toEndOf="@id/textTotal"
+    app:layout_constraintTop_toTopOf="@+id/textTotal"
+    android:text="R$ 0.00"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
